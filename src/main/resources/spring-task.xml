@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--需要被定时任务的目标对象-->
+    <bean id="handleTaskQuartz" class="com.yy.dubbo.quartz.HandleTaskQuartz"/>
+
+    <bean id="jobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="group" value="job_work"/>
+        <property name="name" value="job_work_name"/>
+        <!--false表示上一个任务结束的时候开启下一个任务-->
+        <property name="concurrent" value="false"/>
+        <!--目标:对象类-->
+        <property name="targetObject" ref="handleTaskQuartz"/>
+        <!--要执行的目标对象中的方法-->
+        <property name="targetMethod" value="hadleCode"/>
+    </bean>
+
+    <bean id="myTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="group" value="work_default_name"/>
+        <property name="name" value="work_default"/>
+        <!--表示要对应具体目标对象和方法-->
+        <property name="jobDetail" ref="jobDetail"/>
+        <!--用于表示要执行的时间段   0/30 * * * * ? 30分钟   0/10 * * * * ?-->
+        <property name="cronExpression" value="0/30 * * * * ?"/>
+    </bean>
+    <!--调度工厂-->
+    <bean id="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="myTrigger"/>
+            </list>
+        </property>
+    </bean>
+</beans>
