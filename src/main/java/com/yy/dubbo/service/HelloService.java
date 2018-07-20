@@ -12,4 +12,6 @@ public interface HelloService {
     public String createUser();
 
     public String userDelete(Integer id);
+
+    public String selectById(Integer id);
 }

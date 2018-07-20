@@ -80,6 +80,16 @@ public class HelloServiceImpl implements HelloService {
         return null;
     }
 
+    @Override
+    public String selectById(Integer id) {
+//        logger.info("---------id----------"+id);
+        User user = userDao.selectById(id);
+        if (user != null) {
+            return user.toString();
+        }
+        return "not anybody";
+    }
+
 
     public static void main(String[] args) {
         Date date = new Date();

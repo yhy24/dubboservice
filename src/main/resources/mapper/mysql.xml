@@ -9,7 +9,7 @@
         UPDATE user_info set code = '1' where id = #{id}
     </update>
 
-    <select id="selectById">
+    <select id="selectById" resultType="com.yy.dubbo.pojo.User">
         SELECT * from user_info WHERE id = #{id}
     </select>
 
