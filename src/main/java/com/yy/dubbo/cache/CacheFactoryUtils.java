@@ -19,6 +19,7 @@ public class CacheFactoryUtils {
     static Jedis jedis;
 
     static {
+        /*虚拟机上的的ip和端口号*/
         jedis = new Jedis("192.168.182.135",6379);
     }
 

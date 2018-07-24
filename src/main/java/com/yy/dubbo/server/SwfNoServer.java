@@ -14,7 +14,10 @@ import java.util.Random;
 @Component
 public class SwfNoServer {
     static Logger logger = Logger.getLogger(SwfNoServer.class);
-
+    /**
+     * 流水号的生成
+     * @return indicSeq
+     */
     public String getIndicSeq() {
         StringBuilder indicSeq = new StringBuilder("10086");
         Random random = new Random();
