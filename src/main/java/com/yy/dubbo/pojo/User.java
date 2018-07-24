@@ -1,7 +1,6 @@
 package com.yy.dubbo.pojo;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class User implements Serializable{
     private static final long serialVersionUID = -5046972860468900599L;
@@ -18,6 +17,17 @@ public class User implements Serializable{
     private String code;
     private String create_date;
     private String modify_date;
+
+    public String getInDicSeq() {
+        return inDicSeq;
+    }
+
+    public void setInDicSeq(String inDicSeq) {
+
+        this.inDicSeq = inDicSeq;
+    }
+
+    private String inDicSeq;
 
     public String getCreate_date() {
         return create_date;
@@ -147,6 +157,7 @@ public class User implements Serializable{
                 ", code='" + code + '\'' +
                 ", create_date='" + create_date + '\'' +
                 ", modify_date='" + modify_date + '\'' +
+                ", inDicSeq='" + inDicSeq + '\'' +
                 '}';
     }
 }

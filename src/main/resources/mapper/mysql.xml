@@ -53,8 +53,8 @@
         WHERE id = #{id}
     </update>
     <insert id="insertUser" parameterType="com.yy.dubbo.pojo.User">
-        INSERT INTO user_info (username,password,interest,phone,email,age,mark,sexly,code,create_date,modify_date)
-        VALUES (#{username},#{password},#{interest},#{phone},#{email},#{age},#{mark},#{sexly},#{code},#{create_date},#{modify_date})
+        INSERT INTO user_info (username,password,interest,phone,email,age,mark,sexly,code,create_date,modify_date,inDicSeq)
+        VALUES (#{username},#{password},#{interest},#{phone},#{email},#{age},#{mark},#{sexly},#{code},#{create_date},#{modify_date},#{inDicSeq})
     </insert>
 
     <delete id="deleteUser">

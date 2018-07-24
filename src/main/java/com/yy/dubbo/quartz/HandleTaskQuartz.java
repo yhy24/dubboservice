@@ -39,7 +39,7 @@ public class HandleTaskQuartz {
                 logger.info("code更新成功");
             }
         } else {
-            logger.info("code不为0");
+//            logger.info("code不为0");
         }
     }
 }
