@@ -50,11 +50,11 @@ public class CacheFactoryUtils {
 
     public static void main(String[] args) {
 
-      /*  try {
+        try {
             String name = getString("name");
             logger.info("--name--"+name);
         } catch (ExceptionDubbo e) {
             System.out.println(e.getErrorCode()+"---------"+e.getErrorMessage());
-        }*/
+        }
     }
 }

@@ -32,12 +32,12 @@
       <artifactId>spring-context</artifactId>
       <version>4.3.10.RELEASE</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+<!--     https://mvnrepository.com/artifact/org.springframework/spring-beans
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-beans</artifactId>
       <version>4.3.10.RELEASE</version>
-    </dependency>
+    </dependency>-->
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
     <dependency>
       <groupId>org.springframework</groupId>
@@ -50,18 +50,12 @@
       <artifactId>spring-context-support</artifactId>
       <version>4.3.10.RELEASE</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-aspects -->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-aspects</artifactId>
-      <version>4.3.10.RELEASE</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-jms -->
+<!--    &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-jms &ndash;&gt;
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-jms</artifactId>
       <version>4.3.10.RELEASE</version>
-    </dependency>
+    </dependency>-->
 <!--dubbo进行配置使用的-->
       <dependency>
           <groupId>com.alibaba</groupId>
@@ -132,7 +126,7 @@
       <artifactId>slf4j-api</artifactId>
       <version>1.7.21</version>
     </dependency>-->
-
+<!--事物的使用-->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-aspects</artifactId>

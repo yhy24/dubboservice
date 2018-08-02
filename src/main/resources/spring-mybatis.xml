@@ -6,9 +6,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
        http://www.springframework.org/schema/util
-       http://www.springframework.org/schema/util/spring-util-4.3.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
-       xmlns:tx="http://www.springframework.org/schema/tx"
-       xmlns:context="http://www.springframework.org/schema/context">
+       http://www.springframework.org/schema/util/spring-util-4.3.xsd">
 <!--连接数据库的具体参数配置文件properties-->
         <util:properties id="cfg" location="classpath:mapper/mybatisConfig.properties"/>
     <!--连接池的配置参数-->
@@ -37,17 +35,21 @@
         <!--<property name="sqlSessionFactory" ref="sqlSessionFactory"/>-->
         <property name="basePackage" value="com.yy.dubbo.dao"/>
     </bean>
-<!--开启事物的配置-->
-<!--
+<!--开启事物的配置 使用注解的方式可用
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
-    <tx:annotation-driven transaction-manager="transactionManager"/>
-    &lt;!&ndash;结束事物的配置&ndash;&gt;
-    <context:component-scan base-package="com.yy" use-default-filters="false">
-       &lt;!&ndash; <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>&ndash;&gt;
-        <context:include-filter type="annotation"  expression="org.springframework.stereotype.Service" />
-    </context:component-scan>
--->
+    <tx:annotation-driven transaction-manager="transactionManager"/>-->
+
+    
+
+
+
+
+
+
+
+
+
 
 </beans>
